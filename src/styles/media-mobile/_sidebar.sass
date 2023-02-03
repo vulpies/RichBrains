@@ -1,0 +1,48 @@
+@media (min-width: 360px) and (max-width: 768px)
+	.sidebar
+		display: none
+		&__mobile
+			display: flex
+			margin-bottom: 20px
+			height: auto
+			width: 100%
+			&-arrow
+				width: 10px
+				display: block
+				transition: transform .5s
+				& .arrow
+					fill: #9e9a9a
+				&.arrow-active
+					transform: rotate(90deg)
+					transition: transform .5s
+					& .arrow
+						fill: $color-green-main
+
+			&-title
+				display: flex
+				justify-content: space-between
+				color: $color-black-main
+				align-items: center
+				cursor: pointer
+				padding: 16px 20px 14px 27px
+				&:hover
+					background-color: #F1F1F1
+					border-radius: 3px
+				p
+					font-family: 'Raleway'
+					font-weight: 500
+					font-size: 16px
+					line-height: 22px
+					text-transform: uppercase
+					transition: transform .5s
+					margin-bottom: 0
+					margin-left: 11px
+
+			& .active
+				color: $color-green-main
+				padding: 0
+
+			&-top
+				display: flex
+				& .education-icon
+					stroke: $color-green-main

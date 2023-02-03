@@ -1,0 +1,39 @@
+.sidebar
+	width: 100%
+	background-color: $color-white
+	max-height: 775px
+	height: auto
+	padding: 35px 15px 30px
+
+	&__mobile
+		display: none
+
+	&__header
+		border-bottom: 1px solid $sidebar-line
+		padding-bottom: 20px
+		& span
+			display: flex
+			align-items: flex-end
+		& .education-icon
+			stroke: $color-green-main
+			margin-left: 5px
+
+	&__body
+		margin: 22px 0 30px
+	&__footer
+		border-top: 1px solid $sidebar-line
+		padding-top: 20px
+
+	&__btn
+		background: $color-white
+		box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.06)
+		border: 1px solid $color-green-main
+		color: $color-green-main
+		&:hover
+			// background-color: #cfeec8
+			background-color: $color-green-hover
+
+	&__label
+		margin-bottom: -2px
+		color: $color-green-main
+		margin-left: 13px

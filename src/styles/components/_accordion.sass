@@ -1,0 +1,63 @@
+.sidebar__accordion
+	width: 100%
+	&-item
+		padding: 5px 13px 5px 15px
+
+	&-title
+		display: flex
+		justify-content: space-between
+		color: $color-black-main
+		align-items: center
+		margin-bottom: 10px
+		cursor: pointer
+		&:hover
+			color: #80cb6f
+			& .arrow
+				fill: #80cb6f
+		p
+			margin-right: 15px
+			margin-bottom: 0
+			width: 100%
+			font-weight: 700
+			font-size: 16px
+			line-height: 22px
+			transition: transform .5s
+		& .active
+			color: $color-green-main
+
+	&-content
+		color: $color-black-main
+		height: 0
+		opacity: 0
+		overflow: hidden
+		transition: all 0.8s ease-in-out
+		&.show
+			height: auto
+			opacity: 1
+			transition: opacity 0.8s ease-in-out
+		& li
+			display: flex
+			align-items: center
+			width: 100%
+			min-height: 46px
+			font-size: 14px
+			line-height: 22px
+			max-height: unset
+			padding: 12px
+			border-radius: 3px
+			cursor: pointer
+			&:hover
+				background-color: $sidebar-accordion-item-hover
+			&.li-active
+				background-color: $color-green-hover
+				color: $color-green-main
+
+	&-arrow
+		width: 10px
+		display: block
+		transition: transform .5s
+		&.arrow-active
+			transform: rotate(90deg)
+			transition: transform .5s
+			& .arrow
+				fill: $color-green-main
